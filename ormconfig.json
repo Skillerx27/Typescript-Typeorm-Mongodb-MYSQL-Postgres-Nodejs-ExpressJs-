@@ -1,0 +1,78 @@
+[
+   {
+      "name": "default",
+      "type": "mysql",
+      "host": "localhost",
+      "port": 3306,
+      "username": "root",
+      "password": "password",
+      "database": "shafa",
+      "synchronize": true,
+      "logging": false,
+      "entities": [
+         "src/Entity/**/*.ts"
+      ],
+      "migrations": [
+         "src/migration/**/*.ts"
+      ],
+      "subscribers": [
+         "src/subscriber/**/*.ts"
+      ]
+    },
+    {
+      "name": "test",
+      "type": "mysql",
+      "host": "localhost",
+      "port": 3306,
+      "username": "root",
+      "password": "password",
+      "database": "shafa",
+      "synchronize": true,
+      "logging": false,
+      "entities": [
+         "src/Entity/**/*.ts"
+      ],
+      "migrations": [
+         "src/migration/**/*.ts"
+      ],
+      "subscribers": [
+         "src/subscriber/**/*.ts"
+      ]
+    },
+    {
+      "name": "postgres",
+      "type": "postgres", 
+      "host": "localhost",
+      "port":  5432, 
+      "username": "postgres",
+      "password": "password",
+      "database": "test",
+      "synchronize": true,
+      "logging": false,
+      "entities": [
+         "src/PEntity/**/*.ts"
+      ],
+      "migrations": [
+         "src/migration/**/*.ts"
+      ],
+      "subscribers": [
+         "src/subscriber/**/*.ts"
+      ]
+    },
+    {
+      "name": "mongo",
+      "type": "mongodb",
+      "url": "mongodb://localhost:27017/test?retryWrites=true&w=majority",
+      "synchronize": true,
+      "logging": true,
+      "entities": ["src/MEntity/*.*"],
+      "useNewUrlParser": true,
+      "useFindAndModify": false,
+      "useUnifiedTopology": true,
+      "useCreateIndex": true,
+      "writeConcern": {
+         "j": true
+     }
+      
+    }
+]
